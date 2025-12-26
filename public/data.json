@@ -1,0 +1,206 @@
+{
+  "personal": {
+    "name": "Ebin Amson",
+    "role": "Full-Stack Developer",
+    "tagline": "Building scalable web solutions with AI-powered innovation",
+    "email": "ebinamson91@gmail.com",
+    "phone": "+91 9747859313",
+    "location": "India",
+    "bio": "Undergraduate Computer Science Engineer at S.O.E, CUSAT. Full-stack developer focused on modern web technologies like Next.js, scalable backend systems, and AI-powered applications. Actively working with Agentic AI systems, performance optimization, and accessibility-first design. Experienced across the MERN ecosystem and evolving toward production-grade, scalable web solutions.",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/ebin-amson-41568a284/",
+      "github": "https://github.com/Ebin746",
+      "twitter": "https://twitter.com",
+      "whatsapp": "https://wa.me/919747859313"
+    }
+  },
+  "education": [
+    {
+      "id": 1,
+      "degree": "Bachelor of Technology",
+      "field": "Computer Science & Engineering",
+      "institution": "Cochin University of Science and Technology (CUSAT)",
+      "year": "2027",
+      "gpa": "8.3/10"
+    },
+    {
+      "id": 2,
+      "degree": "Higher Secondary",
+      "institution": "GHSS Elamakkara",
+      "year": "2022",
+      "gpa": "98%"
+    }
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "role": "Full-Stack Developer Intern",
+      "company": "Uprute Design Lab LLP",
+      "duration": "May 2025",
+      "current": true,
+      "description": "Built a web + WhatsApp EdTech platform for course creation and student enrollment. Implemented WhatsApp automation workflows and developed backend services with Next.js, TypeScript, Prisma, and NeonDB.",
+      "highlights": [
+        "WhatsApp Integration",
+        "Real-time Dashboard",
+        "Course Management"
+      ]
+    },
+    {
+      "id": 2,
+      "role": "Full-Stack Developer Intern",
+      "company": "Niykado Technologies Private Limited",
+      "duration": "May 2024",
+      "current": false,
+      "description": "Developed a MERN stack pre-ordering platform for hybrid engine-based products. Designed and implemented authentication, UI, and database integration with secure transactions and real-time updates.",
+      "highlights": [
+        "MERN Stack",
+        "Authentication",
+        "Real-time Updates"
+      ]
+    }
+  ],
+  "techStack": [
+    {
+      "name": "JavaScript",
+      "icon": "SiJavascript"
+    },
+    {
+      "name": "TypeScript",
+      "icon": "SiTypescript"
+    },
+    {
+      "name": "React",
+      "icon": "SiReact"
+    },
+    {
+      "name": "Next.js",
+      "icon": "SiNextdotjs"
+    },
+    {
+      "name": "Node.js",
+      "icon": "SiNodedotjs"
+    },
+    {
+      "name": "Express",
+      "icon": "SiExpress"
+    },
+    {
+      "name": "MongoDB",
+      "icon": "SiMongodb"
+    },
+    {
+      "name": "Prisma",
+      "icon": "SiPrisma"
+    },
+    {
+      "name": "NeonDB",
+      "icon": "SiPostgresql"
+    },
+    {
+      "name": "Supabase",
+      "icon": "SiSupabase"
+    },
+    {
+      "name": "Tailwind CSS",
+      "icon": "SiTailwindcss"
+    },
+    {
+      "name": "Framer Motion",
+      "icon": "SiFramer"
+    },
+    {
+      "name": "C++",
+      "icon": "SiCplusplus"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "ReadMe-AI",
+      "description": "AI-powered platform to auto-generate README files from GitHub repositories. Integrated Google Generative AI with GraphQL backend for job management and API tracking.",
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "GraphQL",
+        "Vercel",
+        "Supabase",
+        "Clerk"
+      ],
+      "link": "https://readme-ai-inky.vercel.app/",
+      "github": "https://github.com/ebinamson/readme-ai"
+    },
+    {
+      "id": 2,
+      "title": "Podcast Platform",
+      "description": "Full-stack podcast platform enabling users to listen, upload, and share podcasts. Built with React, Node.js, MongoDB, and Cloudinary with cookie-based authentication.",
+      "tech": [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Cloudinary"
+      ],
+      "link": "https://podcasto.netlify.app/",
+      "github": "https://github.com/ebinamson/podcast-platform"
+    },
+    {
+      "id": 3,
+      "title": "Social Media Platform",
+      "description": "A modern full-stack social media platform enabling users to create, share, and interact with posts and images. Features authentication, media uploads, likes, comments, and a clean responsive UI.",
+      "tech": [
+        "Next.js",
+        "TailwindCSS",
+        "Prisma",
+        "Neon DB",
+        "Clerk"
+      ],
+      "link": "https://social-media-ecru-chi.vercel.app/",
+      "github": "https://github.com/Ebin746/social_media"
+    }
+  ],
+  "achievements": [
+    {
+      "id": 1,
+      "title": "First Prize – CodeQuest’25 Hackathon",
+      "description": "Secured first place at CodeQuest’25, conducted as part of INNERVE’25 by CODIAC (Association of CSE), College of Engineering Muttathara on 8th March 2025."
+    },
+    {
+      "id": 2,
+      "title": "First Prize – HackTillDawn Hackathon",
+      "description": "Won first prize at the HackTillDawn hackathon conducted by Mar Athanasius College of Engineering (MACE), Kothamangalam."
+    },
+    {
+      "id": 3,
+      "title": "Second Prize – TakeDown Hackathon",
+      "description": "Secured second prize at the TakeDown Hackathon held on 24–25 February 2025 at UCE College of Engineering, Thrissur, organized by RACE & FOSS Club."
+    }
+  ],
+  "skills": {
+    "languages": [
+      "JavaScript",
+      "TypeScript",
+      "Java",
+      "C++"
+    ],
+    "frontend": [
+      "React.js",
+      "Next.js",
+      "Tailwind CSS",
+      "HTML",
+      "CSS",
+      "Framer Motion"
+    ],
+    "backend": [
+      "Node.js",
+      "Express.js",
+      "REST API Design",
+      "Scalable Architecture"
+    ],
+    "database": [
+      "MongoDB",
+      "Prisma",
+      "NeonDB",
+      "Supabase"
+    ]
+  }
+}
