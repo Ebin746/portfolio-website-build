@@ -1,177 +1,105 @@
 ✨ Portfolio Website Build
+[![Node.js](https://img.shields.io/badge/Node.js-22+-green?style=flat-square&logo=node.js)][nodejs]
+[![Next.js](https://img.shields.io/badge/Next.js-^14.2.5-black?style=flat-square&logo=next.js)][nextjs]
+[![TypeScript](https://img.shields.io/badge/TypeScript-^5-blue?style=flat-square&logo=typescript)][typescript]
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-^4.9-38B2AC?style=flat-square&logo=tailwind-css)][tailwind]
+[![npm](https://img.shields.io/badge/npm-^10.5.2-cb0000.svg?style=flat-square&logo=npm)][npm]
+[![Project Version](https://img.shields.io/badge/version-0.0.0-blue?style=flat-square)](package.json)
 
-[![Node.js](https://img.shields.io/badge/Node.js-20.x-green?style=flat&logo=node.js)](https://nodejs.org/en/)
-[![npm](https://img.shields.io/badge/npm-10.x-blue?style=flat&logo=npm)](https://www.npmjs.com/)
-[![Vercel](https://img.shields.io/badge/Vercel-Deployed-lightgray?style=flat&logo=vercel)](https://vercel.com/)
-
-_A modern, responsive, and interactive personal portfolio website designed to showcase projects, experience, and achievements._
-
+*A modern, interactive personal portfolio website designed to showcase projects, experience, and achievements.*
 
 ## Features
 
-
-🔧 **Core Functionality**
-- Modular section architecture for easy content management (Hero, About, Experience, Projects, Tech Stack, Achievements, Contact).
-- Interactive navigation bar with smooth scrolling to sections.
-- Dynamic content rendering for portfolio data (personal info, experience, projects, etc.).
-
-🎨 **User Interface & Experience**
-- Responsive design ensuring optimal viewing across various devices (desktop, tablet, mobile).
-- Custom animated cursor for enhanced visual engagement.
-- Theme switching capability (Light/Dark mode) for personalized viewing.
-
-⚡ **Performance & Animations**
-- Smooth, performant animations and transitions powered by Framer Motion.
-- Optimized image loading with Next.js Image component.
-
-⚙️ **Development & Styling**
-- Utilizes Shadcn/ui-inspired components built on Radix UI primitives.
-- Comprehensive styling with Tailwind CSS for rapid and consistent UI development.
-- TypeScript for robust type-safety and improved developer experience.
-
+- ⚡ **Performance Optimized:** Built with Next.js for fast loading and server-side rendering capabilities.
+- 🎨 **Dynamic UI Components:** Utilizes a comprehensive set of Shadcn/ui components for a consistent and adaptable user interface.
+- 🚀 **Smooth Animations:** Integrates Framer Motion for elegant and engaging UI transitions and interactions.
+- ⚙️ **Themed Presentation:** Supports theme switching to personalize the viewing experience.
+- 👁️ **Custom Interactive Cursor:** Enhances user engagement with a custom-designed cursor.
+- 📱 **Responsive Design:** Ensures optimal viewing and interaction across various devices and screen sizes.
+- 🧩 **Modular Section Design:** Organizes content into distinct sections for easy navigation and content management.
 
 ## Tech Stack
 
-
-| Category     | Technologies                                                                                   |
-|:-------------|:-----------------------------------------------------------------------------------------------|
-| Frontend     | [React][react-url], [Next.js][nextjs-url], [TypeScript][typescript-url], [Framer Motion][framer-motion-url], [Radix UI][radix-ui-url], [next-themes][next-themes-url], [react-hook-form][react-hook-form-url] |
-| Styling      | [Tailwind CSS][tailwindcss-url], [PostCSS][postcss-url]                                      |
-| Icons        | [React Icons][react-icons-url]                                                                 |
-| Deployment   | [Vercel][vercel-url]                                                                           |
-| Tools        | [ESLint][eslint-url], [Prettier][prettier-url]                                                 |
-
+| Category         | Technologies                                                                                |
+|:-----------------|:--------------------------------------------------------------------------------------------|
+| Framework        | Next.js [nextjs], React [react]                                                             |
+| Language         | TypeScript [typescript]                                                                     |
+| Styling          | Tailwind CSS [tailwind], PostCSS [postcss], CSS Modules                                   |
+| UI Components    | Shadcn/ui, Radix UI [radixui], `class-variance-authority`                                   |
+| Animation        | Framer Motion [framer]                                                                      |
+| State Management | React Hooks [react]                                                                         |
+| Form Management  | React Hook Form [react-hook-form], Zod [zod] (via `@hookform/resolvers`)                  |
+| Utilities        | `date-fns` [date-fns], `next-themes` [next-themes], `tailwind-merge` [tailwind-merge]     |
+| Development      | ESLint [eslint], Autoprefixer [autoprefixer]                                                |
+| Data Fetching    | Custom data loader (`@/lib/data-loader`)                                                   |
 
 ## Quick Start
 
-This section outlines the steps to get the project up and running on your local machine.
-
 ### Prerequisites
 
-Ensure you have the following software installed:
-- [Node.js][nodejs-url] (v20.x or higher)
-- [npm][npm-url] (v10.x or higher) or [Yarn][yarn-url] (v1.22.x or higher)
-- Git
+Ensure you have the following installed on your system:
+
+-   Node.js: Version 22.x or higher.
+-   npm: Version 10.x or higher (typically ships with Node.js).
+-   Git
 
 ### Installation
 
-Clone the repository and install dependencies:
+1.  **Clone the repository:**
+    bash
+    git clone https://github.com/your-username/portfolio-website-build.git
+    cd portfolio-website-build
+    
 
-bash
-# Clone the repository
-git clone https://github.com/your-username/portfolio-website-build.git
-
-# Navigate into the project directory
-cd portfolio-website-build
-
-# Install dependencies using npm
-npm install
-# Or using yarn
-# yarn install
-
-
-### Environment Variables
-
-This project uses environment variables for configuration. Create a `.env.local` file in the root directory and populate it as follows.
-
-env
-# Port for the development server
-PORT=3000
-
-# Example: If your data-loader fetches from an external API, define its URL here.
-# NEXT_PUBLIC_API_BASE_URL=https://api.example.com
-
-
-> [!NOTE]
-> Environment variables prefixed with `NEXT_PUBLIC_` are exposed to the browser. Avoid placing sensitive information in these variables.
-
+2.  **Install dependencies:**
+    bash
+    npm install
+    
 
 ## Development
 
+### Scripts
 
-### Commands
-
-Execute the following commands from the project root directory:
+The following scripts are available for development:
 
 bash
-# Start the development server (http://localhost:3000 by default)
-npm run dev
-# Or using yarn
-# yarn dev
-
-# Create a production-ready build
-npm run build
-# Or using yarn
-# yarn build
-
-# Start the production build locally
-npm run start
-# Or using yarn
-# yarn start
-
-# Run ESLint to check for code quality issues
-npm run lint
-# Or using yarn
-# yarn lint
+npm run dev      # Starts the development server
+npm run build    # Builds the application for production
+npm run start    # Starts the production server (after building)
+npm run lint     # Runs ESLint to check for code quality issues
 
 
-### Testing
-
-This project does not currently include an explicit testing framework configuration (e.g., Jest, React Testing Library, Playwright). For a comprehensive application, it is recommended to implement:
-- **Unit Tests**: To verify individual components and utility functions.
-- **Integration Tests**: To ensure different parts of the application work together correctly.
-- **End-to-End (E2E) Tests**: To simulate user flows and validate the entire application experience.
-
+> [!NOTE]
+> Run `npm run dev` to start the local development server. The application will be accessible at `http://localhost:3000`.
 
 ## Deployment
 
-This Next.js project is ideally suited for deployment on [Vercel][vercel-url], the creators of Next.js, offering a streamlined deployment experience.
+This project is built using Next.js and is optimized for deployment on Vercel.
 
-1.  **Create a Vercel Account**: If you don't have one, sign up at [vercel.com][vercel-url].
-2.  **Connect GitHub**: Link your GitHub account to Vercel.
-3.  **Import Project**: From the Vercel dashboard, click "Add New..." -> "Project" and select your `portfolio-website-build` repository.
-4.  **Configure**: Vercel will automatically detect that it's a Next.js project. You can review the build and output settings, and add any environment variables defined in your `.env.local` file (e.g., `NEXT_PUBLIC_API_BASE_URL`) within the Vercel project settings.
-5.  **Deploy**: Click "Deploy". Vercel will build and deploy your application. Subsequent pushes to your connected Git branch will trigger automatic re-deployments.
+To deploy your instance:
 
+1.  Create a new project on Vercel.
+2.  Connect your Git repository.
+3.  Vercel will automatically detect Next.js and configure the build process.
 
-## Contributing
-
-Contributions are welcome! If you'd like to contribute, please follow these guidelines:
-
-1.  **Fork the Repository**: Fork this repository to your own GitHub account.
-2.  **Clone Your Fork**: Clone your forked repository to your local machine.
-    bash
-    git clone https://github.com/your-username/portfolio-website-build.git
-    
-3.  **Create a New Branch**: Create a new branch for your feature or bugfix.
-    bash
-    git checkout -b feature/your-feature-name
-    # or
-    git checkout -b bugfix/issue-description
-    
-4.  **Implement Changes**: Make your changes, ensuring they adhere to the project's code style and conventions.
-5.  **Commit Your Changes**: Write clear, concise commit messages.
-    - Use a conventional commit style (e.g., `feat: Add new project section`, `fix: Resolve responsive layout issue`, `chore: Update dependencies`).
-6.  **Push to Your Fork**: Push your branch to your forked repository.
-    bash
-    git push origin feature/your-feature-name
-    
-7.  **Open a Pull Request**: Open a pull request from your branch to the `main` branch of the original repository. Provide a descriptive title and detailed explanation of your changes.
+bash
+# Recommended deployment platform
+vercel deploy
 
 
-[react-url]: https://react.dev/
-[nextjs-url]: https://nextjs.org/
-[typescript-url]: https://www.typescriptlang.org/
-[framer-motion-url]: https://www.framer.com/motion/
-[radix-ui-url]: https://www.radix-ui.com/
-[next-themes-url]: https://github.com/pacocoursey/next-themes
-[react-hook-form-url]: https://react-hook-form.com/
-[tailwindcss-url]: https://tailwindcss.com/
-[postcss-url]: https://postcss.org/
-[react-icons-url]: https://react-icons.github.io/react-icons/
-[vercel-url]: https://vercel.com/
-[eslint-url]: https://eslint.org/
-[prettier-url]: https://prettier.io/
-[nodejs-url]: https://nodejs.org/
-[npm-url]: https://www.npmjs.com/
-[yarn-url]: https://yarnpkg.com/
+[nodejs]: https://nodejs.org
+[nextjs]: https://nextjs.org
+[typescript]: https://www.typescriptlang.org
+[tailwind]: https://tailwindcss.com
+[npm]: https://www.npmjs.com
+[react]: https://react.dev
+[postcss]: https://postcss.org
+[radixui]: https://www.radix-ui.com
+[framer]: https://www.framer.com/motion
+[react-hook-form]: https://react-hook-form.com
+[zod]: https://zod.dev
+[date-fns]: https://date-fns.org
+[next-themes]: https://github.com/pacocoursey/next-themes
+[tailwind-merge]: https://github.com/dcastil/tailwind-merge
+[eslint]: https://eslint.org
+[autoprefixer]: https://github.com/postcss/autoprefixer
