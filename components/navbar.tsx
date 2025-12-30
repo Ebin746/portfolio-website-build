@@ -4,6 +4,7 @@ import type React from "react"
 
 import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
 
 const navItems = [
   { label: "Home", href: "#home" },
@@ -35,11 +36,33 @@ export function Navbar() {
     setIsOpen(false)
   }
 
+  const menuVariants = {
+    hidden: { opacity: 0, height: 0 },
+    visible: {
+      opacity: 1,
+      height: "calc(100dvh - 4rem)",
+      transition: {
+        duration: 0.3,
+        when: "beforeChildren",
+        staggerChildren: 0.1,
+      },
+    },
+    exit: {
+      opacity: 0,
+      height: 0,
+      transition: { duration: 0.3 },
+    },
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  }
+
   return (
     <nav
-      className={`fixed top-0 w-full z-40 transition-all duration-300 ${
-        isScrolled ? "bg-[#0B0B0B]/95 backdrop-blur-md border-b border-[#F5C518]/20" : "bg-transparent"
-      }`}
+      className={`fixed top-0 w-full z-40 transition-all duration-300 ${isScrolled || isOpen ? "bg-[#0B0B0B]/95 backdrop-blur-md border-b border-[#F5C518]/20" : "bg-transparent"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -80,23 +103,32 @@ export function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-[#0B0B0B]/98 backdrop-blur-md border-b border-[#F5C518]/20">
-          <div className="px-4 pt-4 pb-6 space-y-4">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                onClick={(e) => handleNavClick(e, item.href)}
-                className="block text-sm font-medium text-[#F5C518] hover:text-[#FFD700] transition-colors"
-                data-cursor-hover
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={menuVariants}
+            className="md:hidden bg-[#0B0B0B] border-b border-[#F5C518]/20 overflow-hidden"
+          >
+            <div className="flex flex-col items-center justify-center h-full space-y-8">
+              {navItems.map((item) => (
+                <motion.a
+                  key={item.label}
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  variants={itemVariants}
+                  className="text-2xl font-bold text-[#F5C518] hover:text-[#FFD700] transition-colors"
+                  data-cursor-hover
+                >
+                  {item.label}
+                </motion.a>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   )
 }

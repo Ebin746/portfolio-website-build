@@ -6,17 +6,21 @@ export function CustomCursor() {
   const cursorRef = useRef<HTMLDivElement>(null)
   const dotRef = useRef<HTMLDivElement>(null)
   const [isHovering, setIsHovering] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
   const mouseXRef = useRef(0)
   const mouseYRef = useRef(0)
   const cursorXRef = useRef(0)
   const cursorYRef = useRef(0)
-  const animationFrameRef = useRef<number>()
+  const animationFrameRef = useRef<number | undefined>(undefined)
 
   useEffect(() => {
-    // Skip cursor on touch devices
-    if (window.matchMedia("(pointer: coarse)").matches) {
+    // Check if device has a fine pointer (mouse)
+    const hasFinePointer = window.matchMedia("(pointer: fine)").matches
+    if (!hasFinePointer) {
       return
     }
+
+    setIsVisible(true)
 
     const smoothCursor = () => {
       // Smooth easing for cursor ring
@@ -75,6 +79,8 @@ export function CustomCursor() {
     }
   }, [])
 
+  if (!isVisible) return null
+
   return (
     <>
       <div
@@ -105,3 +111,4 @@ export function CustomCursor() {
     </>
   )
 }
+
