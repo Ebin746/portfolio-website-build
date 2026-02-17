@@ -173,6 +173,16 @@
       "id": 3,
       "title": "Second Prize – TakeDown Hackathon",
       "description": "Secured second prize at the TakeDown Hackathon held on 24–25 February 2025 at UCE College of Engineering, Thrissur, organized by RACE & FOSS Club."
+    },
+    {
+      "id": 4,
+      "title": "First Prize – Hack for Tomorrow ",
+      "description": "Grateful to win first prize and a cash award of ₹15,000 at the Hack for Tomorrow Hackathon organized by Model Engineering College."
+    },
+    {
+      "id": 5,
+      "title": "Third Prize – Code Kalari Hackathon ",
+      "description": "Secured third place at the Code Kalari Hackathon organized by IIIT Kottayam, competing with students from various colleges across India, and received a cash prize of ₹30,000."
     }
   ],
   "skills": {
