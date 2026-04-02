@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { FiGithub, FiExternalLink } from "react-icons/fi"
+import { FiGithub, FiExternalLink, FiPlay } from "react-icons/fi"
 import type { PortfolioData } from "@/lib/data-loader"
 
 interface ProjectsSectionProps {
@@ -86,7 +86,7 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
                       Code
                     </Link>
                   )}
-                  {project.link !== "#" && (
+                  {project.link && project.link !== "#" && (
                     <Link
                       href={project.link}
                       target="_blank"
@@ -95,6 +95,17 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
                     >
                       <FiExternalLink className="w-4 h-4" />
                       Live
+                    </Link>
+                  )}
+                  {project.video && project.video !== "#" && (
+                    <Link
+                      href={project.video}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 border-2 border-[#F5C518] text-[#F5C518] font-bold rounded-lg hover:bg-[#F5C518]/10 transition-all"
+                    >
+                      <FiPlay className="w-4 h-4" />
+                      Video
                     </Link>
                   )}
                 </div>
