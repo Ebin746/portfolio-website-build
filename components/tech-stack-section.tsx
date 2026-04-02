@@ -25,6 +25,8 @@ export function TechStackSection({ techStack }: TechStackSectionProps) {
       SiFramer: Icons.SiFramer,
       SiCplusplus: Icons.SiCplusplus,
       SiProbot: Icons.SiProbot,
+      SiOpenai: Icons.SiOpenai,
+      SiPython: Icons.SiPython,
     }
     return iconMap[iconName]
   }
