@@ -24,6 +24,7 @@ export function TechStackSection({ techStack }: TechStackSectionProps) {
       SiTailwindcss: Icons.SiTailwindcss,
       SiFramer: Icons.SiFramer,
       SiCplusplus: Icons.SiCplusplus,
+      SiProbot: Icons.SiProbot,
     }
     return iconMap[iconName]
   }
@@ -55,7 +56,7 @@ export function TechStackSection({ techStack }: TechStackSectionProps) {
             }}
             className="flex gap-8 w-max"
           >
-            {[...techStack, ...techStack].map((tech, idx) => {
+            {[...techStack, ...techStack].map((tech: any, idx) => {
               const Icon = getIcon(tech.icon)
               return (
                 <motion.div
@@ -73,7 +74,7 @@ export function TechStackSection({ techStack }: TechStackSectionProps) {
 
         {/* Mobile: Static grid */}
         <div className="md:hidden grid grid-cols-4 gap-4">
-          {techStack.map((tech) => {
+          {techStack.map((tech: any) => {
             const Icon = getIcon(tech.icon)
             return (
               <motion.div

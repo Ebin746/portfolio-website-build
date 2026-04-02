@@ -111,6 +111,10 @@
     {
       "name": "C++",
       "icon": "SiCplusplus"
+    },
+    {
+      "name": "Mastra",
+      "icon": "SiProbot"
     }
   ],
   "projects": [
@@ -156,6 +160,19 @@
       ],
       "link": "https://social-media-ecru-chi.vercel.app/",
       "github": "https://github.com/Ebin746/social_media"
+    },
+    {
+      "id": 4,
+      "title": "🏦 Loan Assistant: A Financial Agent",
+      "description": "Loan Assistant is a production-grade, multi-stage AI application designed to streamline the loan eligibility and application process. Using advanced AI orchestration and OCR technology, it guides users from initial inquiry to final document generation with a seamless, conversational interface.",
+      "tech": [
+        "Next.js",
+        "Mastra",
+        "Tailwind CSS",
+        "MongoDB"
+      ],
+      "link": "#",
+      "github": "https://github.com/Ebin746/MiniProject"
     }
   ],
   "achievements": [
@@ -204,7 +221,8 @@
       "Node.js",
       "Express.js",
       "REST API Design",
-      "Scalable Architecture"
+      "Scalable Architecture",
+      "AI Orchestration (Mastra)"
     ],
     "database": [
       "MongoDB",
